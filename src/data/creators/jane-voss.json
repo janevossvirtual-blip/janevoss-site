@@ -1,0 +1,96 @@
+{
+  "slug": "jane-voss",
+  "displayName": "Jane Voss",
+  "publicEmail": "TODO@janevoss.example",
+  "adminEmail": "TODO@janevoss.example",
+  "tagline": "AI-generated alpine lifestyle creator.",
+  "shortBio": "Jane Voss is a fully AI-generated virtual model focused on Austrian alpine lakes, hiking stories and resort mood.",
+  "fullBio": "Jane Voss is a synthetic alpine lifestyle creator built for SFW public storytelling around Austrian mountain lakes, hiking routes, calm resort atmosphere and seasonal travel mood. She is not a real person and is not based on any real individual.",
+  "aiDisclosure": "Jane Voss is a fully AI-generated virtual model. She is not a real person and is not based on any real individual. All images are synthetic.",
+  "themes": [
+    "Austrian alpine lakes",
+    "hiking",
+    "resort mood",
+    "lake lifestyle",
+    "soft glamour",
+    "public-safe creator storytelling"
+  ],
+  "styleTags": [
+    "premium alpine",
+    "cinematic scroll",
+    "SFW",
+    "synthetic creator",
+    "clean linktree",
+    "mobile-first"
+  ],
+  "contentPillars": [
+    "Alpine Hiking Diary",
+    "Lake Lifestyle",
+    "Resort Mood",
+    "AI Disclosure",
+    "Creator Operations"
+  ],
+  "platformPolicy": {
+    "noAutomaticAccountCreation": true,
+    "noLoginAutomation": true,
+    "noCaptchaSmsEmailAutomation": true,
+    "noDeepfakes": true,
+    "noRealPersonLikeness": true,
+    "noCelebrityLikeness": true,
+    "noUnderageStyling": true,
+    "publicContentSfw": true,
+    "followPlatformRules": true
+  },
+  "platforms": {
+    "instagram": {
+      "status": "manual_account_exists",
+      "url": "https://www.instagram.com/janevoss.virtual/"
+    },
+    "facebook": {
+      "status": "manual_account_exists",
+      "url": "https://www.facebook.com/profile.php?id=61591323822967"
+    },
+    "x": {
+      "status": "coming_soon",
+      "url": null
+    },
+    "fanvue": {
+      "status": "coming_soon",
+      "url": null
+    },
+    "mym": {
+      "status": "coming_soon",
+      "url": null
+    }
+  },
+  "links": {
+    "home": "/",
+    "profile": "/jane-voss/",
+    "disclosure": "/jane-voss/disclosure/",
+    "instagram": "https://www.instagram.com/janevoss.virtual/",
+    "facebook": "https://www.facebook.com/profile.php?id=61591323822967",
+    "x": null,
+    "fanvue": null,
+    "mym": null
+  },
+  "seoTitle": "Jane Voss | AI-Generated Alpine Lifestyle Creator",
+  "seoDescription": "Jane Voss is a fully AI-generated virtual model focused on Austrian alpine lakes, hiking stories and resort mood.",
+  "status": {
+    "site": "live",
+    "homepageIsLinktree": true,
+    "separateLinksPage": false,
+    "publicLaunch": "SFW public prototype"
+  },
+  "assets": {
+    "homepageHtml": "index.html",
+    "assetRoot": "homepage_linkhub_lora_set/scroll_preview_start3_magic_lace",
+    "scrollVideo": "homepage_linkhub_lora_set/scroll_video_higgsfield_trimmed/jane_scroll_higgsfield_scrub_optimized.mp4",
+    "profileImagePlaceholder": true
+  },
+  "notes": [
+    "TODO publicEmail/adminEmail are placeholders and must be replaced before commercial launch.",
+    "The homepage / is the main link-in-bio page. Do not create a separate /jane-voss/links route unless product direction changes.",
+    "Instagram and Facebook URLs were found in the repo and are treated as real public URLs.",
+    "Netlify is currently CLI-deployed, not connected to Git auto-deploy."
+  ]
+}

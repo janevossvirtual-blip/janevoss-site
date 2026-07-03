@@ -255,6 +255,20 @@
       text-shadow: 0 10px 20px rgba(0, 0, 0, 0.36);
     }
 
+    .ai-disclosure {
+      max-width: 480px;
+      margin: -20px 0 22px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      color: rgba(255, 255, 255, 0.84);
+      background: rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(14px);
+      font-size: 0.86rem;
+      line-height: 1.42;
+      text-shadow: 0 8px 18px rgba(0, 0, 0, 0.32);
+    }
+
     .links {
       position: relative;
       display: block;
@@ -816,20 +830,23 @@
       <div class="eyebrow" id="eyebrow">Public</div>
       <h1 id="headline">Jane Voss</h1>
       <p class="subtitle" id="subtitle">Virtual alpine lifestyle creator.</p>
+      <p class="ai-disclosure" id="aiDisclosure">
+        Fully AI-generated virtual model. Not a real person. All images are synthetic.
+      </p>
 
       <nav class="links" id="links" aria-label="Jane Voss links"></nav>
     </section>
 
     <footer class="footer">
       <div class="age">
-        <span class="age__badge">18+</span>
-        <span id="ageText">Public preview. Private access stays gated.</span>
+        <span class="age__badge">AI</span>
+        <span id="ageText">Fully AI-generated virtual model. All images are synthetic.</span>
       </div>
 
       <div class="stage-tabs" aria-label="Scroll stages">
         <button class="dot is-active" type="button" data-stage-jump="0" aria-label="Public stage"></button>
         <button class="dot" type="button" data-stage-jump="1" aria-label="Closer stage"></button>
-        <button class="dot" type="button" data-stage-jump="2" aria-label="Private stage"></button>
+        <button class="dot" type="button" data-stage-jump="2" aria-label="Studio stage"></button>
       </div>
     </footer>
   </main>
@@ -837,7 +854,7 @@
   <div class="scroll-space" aria-hidden="true"></div>
 
   <div class="fallback-note">
-    Video or image assets are not available yet. Refresh this page in a moment.
+
   </div>
 
   <script>
@@ -868,16 +885,16 @@
             eyebrow: "Public",
             headline: "Jane Voss",
             subtitle: "Virtual alpine lifestyle creator.",
-            age: "Public preview. Private access stays gated.",
+            age: "Fully AI-generated virtual model. All images are synthetic.",
             links: [
               ["latest", "Latest Adventure", "Fresh trail drop", false],
               ["instagram", "Instagram", "@janevoss.virtual", false],
               ["facebook", "Facebook", "Jane Voss profile", false, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube Shorts", "@janevoss", false, false, "mini"],
-              ["hub", "Private Hub", "18+ gallery & videos", true],
+              ["hub", "Creator Hub", "Coming soon", true],
               ["gallery", "Gallery", "Preview", true, false, "mini"],
-              ["star", "Videos", "Exclusive", true, false, "mini"]
+              ["star", "Videos", "Coming soon", true, false, "mini"]
             ]
           },
           {
@@ -886,14 +903,14 @@
             eyebrow: "Closer",
             headline: "Behind the Adventure",
             subtitle: "More looks. More moments.",
-            age: "Preview mode. Member areas stay locked.",
+            age: "Synthetic creator profile. Public-safe preview.",
             links: [
-              ["camera", "Behind the Scenes", "Exclusive content & stories", true],
-              ["hub", "Enter Private Hub", "Unlock full access", true],
+              ["camera", "Behind the Scenes", "Creator notes", true],
+              ["hub", "Creator Hub", "Coming soon", true],
               ["instagram", "Instagram", "@janevoss.virtual", false],
               ["facebook", "Facebook", "Jane Voss profile", false, false, "mini"],
               ["gallery", "Gallery", "Early edits", true, false, "mini"],
-              ["star", "Videos", "Exclusive", true, false, "mini"],
+              ["star", "Videos", "Coming soon", true, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "Shorts", "@janevoss", false, false, "mini"]
             ]
@@ -901,15 +918,15 @@
           {
             key: "private",
             image: `${ASSET_ROOT}/alpine_private_nobackpack_golden.png`,
-            eyebrow: "Exclusive",
-            headline: "Private Hub",
-            subtitle: "Private gallery. Early access.",
-            age: "18+ only. Secure. Private. Yours.",
+            eyebrow: "Studio",
+            headline: "Creator Hub",
+            subtitle: "Synthetic alpine creator archive.",
+            age: "AI-generated profile. Public-safe content only.",
             links: [
-              ["hub", "Enter Private Hub", "Unlock full access to my world", true, true],
-              ["gallery", "Private Gallery", "Curated moments from on & off the trail", true],
-              ["star", "Exclusive Content", "Behind the scenes, early access & more", true],
-              ["discord", "Discord", "Member access", true, false, "mini"],
+              ["hub", "Creator Hub", "Coming soon", true, true],
+              ["gallery", "Gallery", "Curated moments from on & off the trail", true],
+              ["star", "Creator Notes", "Behind the scenes and planning", true],
+              ["discord", "Community", "Coming soon", true, false, "mini"],
               ["instagram", "Instagram", "@janevoss.virtual", false, false, "mini"],
               ["facebook", "Facebook", "Jane Voss profile", false, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
@@ -929,15 +946,15 @@
             eyebrow: "Public",
             headline: "Jane Voss",
             subtitle: "Your new favorite creator.",
-            age: "Public preview. Private access stays gated.",
+            age: "Fully AI-generated virtual model. All images are synthetic.",
             links: [
               ["latest", "Latest Content", "New studio set", false],
               ["instagram", "Instagram", "@janevoss", false],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube", "@janevoss", false, false, "mini"],
-              ["hub", "Private Hub", "18+ gallery & videos", true],
+              ["hub", "Creator Hub", "Coming soon", true],
               ["gallery", "Gallery", "Preview", true, false, "mini"],
-              ["star", "Videos", "Exclusive", true, false, "mini"]
+              ["star", "Videos", "Coming soon", true, false, "mini"]
             ]
           },
           {
@@ -946,13 +963,13 @@
             eyebrow: "Closer",
             headline: "Closer Looks",
             subtitle: "Different sides. Same me.",
-            age: "Preview mode. Member areas stay locked.",
+            age: "Synthetic creator profile. Public-safe preview.",
             links: [
               ["camera", "Behind the Scenes", "Studio sets & outtakes", true],
-              ["hub", "Enter Private Hub", "Unlock full access", true],
+              ["hub", "Creator Hub", "Coming soon", true],
               ["instagram", "Instagram", "@janevoss", false],
               ["gallery", "Outfit Gallery", "Early previews", true, false, "mini"],
-              ["star", "Videos", "Exclusive", true, false, "mini"],
+              ["star", "Videos", "Coming soon", true, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube", "@janevoss", false, false, "mini"]
             ]
@@ -960,15 +977,15 @@
           {
             key: "private",
             image: `${ASSET_ROOT}/studio_private.png`,
-            eyebrow: "Exclusive",
-            headline: "Unlock the Rest",
-            subtitle: "Private content made for you.",
-            age: "18+ only. Secure. Private. Yours.",
+            eyebrow: "Studio",
+            headline: "Creator Archive",
+            subtitle: "Creator archive coming soon.",
+            age: "AI-generated profile. Public-safe content only.",
             links: [
-              ["hub", "Enter Private Hub", "Unlock Access", true, true],
-              ["gallery", "Private Gallery", "Member-only edits", true],
-              ["star", "Exclusive Videos", "Early access drops", true],
-              ["discord", "Discord", "Private updates", true, false, "mini"],
+              ["hub", "Creator Hub", "Coming soon", true, true],
+              ["gallery", "Gallery", "Curated edits", true],
+              ["star", "Creator Notes", "Early updates", true],
+              ["discord", "Community", "Coming soon", true, false, "mini"],
               ["instagram", "Instagram", "@janevoss", false, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube", "@janevoss", false, false, "mini"]
@@ -987,15 +1004,15 @@
             eyebrow: "Public",
             headline: "Jane Voss",
             subtitle: "Next level content creator.",
-            age: "Public preview. Private access stays gated.",
+            age: "Fully AI-generated virtual model. All images are synthetic.",
             links: [
               ["latest", "Latest Drop", "Night set preview", false],
               ["instagram", "Instagram", "@janevoss", false],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube", "@janevoss", false, false, "mini"],
-              ["hub", "Private Hub", "18+ gallery & videos", true],
+              ["hub", "Creator Hub", "Coming soon", true],
               ["gallery", "Gallery", "Preview", true, false, "mini"],
-              ["star", "Videos", "Exclusive", true, false, "mini"]
+              ["star", "Videos", "Coming soon", true, false, "mini"]
             ]
           },
           {
@@ -1004,13 +1021,13 @@
             eyebrow: "Closer",
             headline: "Beyond the Feed",
             subtitle: "More content. More you.",
-            age: "Preview mode. Member areas stay locked.",
+            age: "Synthetic creator profile. Public-safe preview.",
             links: [
               ["camera", "Behind the Scenes", "After-dark previews", true],
-              ["hub", "Enter Private Hub", "Unlock full access", true],
+              ["hub", "Creator Hub", "Coming soon", true],
               ["instagram", "Instagram", "@janevoss", false],
               ["gallery", "Photo Dump", "Early edits", true, false, "mini"],
-              ["star", "Videos", "Exclusive", true, false, "mini"],
+              ["star", "Videos", "Coming soon", true, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube", "@janevoss", false, false, "mini"]
             ]
@@ -1018,15 +1035,15 @@
           {
             key: "private",
             image: `${ASSET_ROOT}/neon_private.png`,
-            eyebrow: "Exclusive",
-            headline: "Private Zone",
-            subtitle: "Unlocked content. Members only.",
-            age: "18+ only. Secure. Private. Yours.",
+            eyebrow: "Studio",
+            headline: "Creator Zone",
+            subtitle: "Neon archive coming soon.",
+            age: "AI-generated profile. Public-safe content only.",
             links: [
-              ["hub", "Enter Private Hub", "Unlock Access", true, true],
-              ["gallery", "Private Gallery", "Member-only edits", true],
-              ["star", "Exclusive Videos", "Neon night sets", true],
-              ["discord", "Discord", "Private updates", true, false, "mini"],
+              ["hub", "Creator Hub", "Coming soon", true, true],
+              ["gallery", "Gallery", "Curated edits", true],
+              ["star", "Creator Notes", "Neon night sets", true],
+              ["discord", "Community", "Coming soon", true, false, "mini"],
               ["instagram", "Instagram", "@janevoss", false, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube", "@janevoss", false, false, "mini"]
@@ -1105,7 +1122,7 @@
               <span class="link__label">${label}${locked ? lock : ""}</span>
               <span class="link__meta">${meta}</span>
             </span>
-            <span class="link__button">Unlock Access</span>
+            <span class="link__button">Coming Soon</span>
           </a>
         `;
       }
