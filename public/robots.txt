@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://janevoss-hiking.netlify.app/sitemap.xml
