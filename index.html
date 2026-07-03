@@ -377,6 +377,12 @@
       color: #fff;
     }
 
+    .link__icon--facebook {
+      border-color: rgba(255, 255, 255, 0.42);
+      background: #1877f2;
+      color: #fff;
+    }
+
     .link__icon--hub,
     .link__icon--gallery,
     .link__icon--star,
@@ -865,7 +871,8 @@
             age: "Public preview. Private access stays gated.",
             links: [
               ["latest", "Latest Adventure", "Fresh trail drop", false],
-              ["instagram", "Instagram", "@janevoss", false],
+              ["instagram", "Instagram", "@janevoss.virtual", false],
+              ["facebook", "Facebook", "Jane Voss profile", false, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "YouTube Shorts", "@janevoss", false, false, "mini"],
               ["hub", "Private Hub", "18+ gallery & videos", true],
@@ -883,7 +890,8 @@
             links: [
               ["camera", "Behind the Scenes", "Exclusive content & stories", true],
               ["hub", "Enter Private Hub", "Unlock full access", true],
-              ["instagram", "Instagram", "@janevoss", false],
+              ["instagram", "Instagram", "@janevoss.virtual", false],
+              ["facebook", "Facebook", "Jane Voss profile", false, false, "mini"],
               ["gallery", "Gallery", "Early edits", true, false, "mini"],
               ["star", "Videos", "Exclusive", true, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
@@ -902,7 +910,8 @@
               ["gallery", "Private Gallery", "Curated moments from on & off the trail", true],
               ["star", "Exclusive Content", "Behind the scenes, early access & more", true],
               ["discord", "Discord", "Member access", true, false, "mini"],
-              ["instagram", "Instagram", "@janevoss", false, false, "mini"],
+              ["instagram", "Instagram", "@janevoss.virtual", false, false, "mini"],
+              ["facebook", "Facebook", "Jane Voss profile", false, false, "mini"],
               ["tiktok", "TikTok", "@janevoss", false, false, "mini"],
               ["youtube", "Shorts", "@janevoss", false, false, "mini"]
             ]
@@ -1030,6 +1039,7 @@
     const icons = {
       latest: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/></svg>',
       instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="4.8" y="4.8" width="14.4" height="14.4" rx="4.4" stroke-width="2.2"/><circle cx="12" cy="12" r="3.35" stroke-width="2.2"/><circle cx="16.45" cy="7.6" r="1.05" fill="currentColor" stroke="none"/></svg>',
+      facebook: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.1 8.1h2.3V4.3c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.7 2.1-5.7 5.9v3.3H3.6v4.3h3.7V24h4.5v-6.4h3.5l.7-4.3h-4.2v-2.9c0-1.2.3-2.3 2.3-2.3Z"/></svg>',
       tiktok: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.7 4.8v9.25a4.15 4.15 0 1 1-4.15-4.15" stroke="#25f4ee" stroke-width="2.2" stroke-linecap="round"/><path d="M15.8 5.8c.9 1.75 2.38 2.78 4.3 3.02" stroke="#fe2c55" stroke-width="2.2" stroke-linecap="round"/><path d="M13.75 4.2v9.75a3.3 3.3 0 1 1-3.3-3.3" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M13.75 5.25c1.02 2.02 2.72 3.18 5.05 3.45" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>',
       youtube: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9.4 7.7 7.3 4.3-7.3 4.3V7.7Z" fill="currentColor"/></svg>',
       camera: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.6-2h4.8L16 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>',
@@ -1077,6 +1087,11 @@
 
     function linkTemplate(item, forcedVariant = "") {
       const [icon, label, meta, locked, primary, variant] = item;
+      const urls = {
+        instagram: "https://www.instagram.com/janevoss.virtual/",
+        facebook: "https://www.facebook.com/profile.php?id=61591323822967"
+      };
+      const href = urls[icon] || "#";
       const mode = forcedVariant || variant;
       const classes = ["link"];
       if (primary && mode !== "peek") classes.push("link--primary");
@@ -1085,7 +1100,7 @@
       const iconClasses = `link__icon link__icon--${icon}`;
       if (primary && mode !== "peek") {
         return `
-          <a class="${classes.join(" ")}" href="#" aria-label="${label}">
+          <a class="${classes.join(" ")}" href="${href}" aria-label="${label}">
             <span>
               <span class="link__label">${label}${locked ? lock : ""}</span>
               <span class="link__meta">${meta}</span>
@@ -1095,7 +1110,7 @@
         `;
       }
       return `
-        <a class="${classes.join(" ")}" href="#" aria-label="${label}">
+        <a class="${classes.join(" ")}" href="${href}" aria-label="${label}">
           <span class="${iconClasses}">${icons[icon] || icons.latest}</span>
           <span>
             <span class="link__label">${label}${locked ? lock : ""}</span>
