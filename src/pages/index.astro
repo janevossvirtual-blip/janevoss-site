@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const disclosure = "Jane Voss is a fully AI-generated virtual model. She is not a real person and is not based on any real individual. All images are synthetic.";
+const cards = [
+  ["Alpine Hiking Diary", "Trail mornings, lake routes and Austrian mountain atmosphere."],
+  ["Lake Lifestyle", "Calm public stories around alpine water, resort days and travel mood."],
+  ["Resort Mood", "Polished SFW visual direction for soft glamour and seasonal campaigns."]
+];
+---
+
+<BaseLayout path="/">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="disclosure-note">{disclosure}</p>
+      <p class="eyebrow">AI-generated alpine lifestyle creator</p>
+      <h1>Jane Voss</h1>
+      <p class="lede">
+        Synthetic creator storytelling inspired by Austrian alpine lakes, hiking routes and calm resort atmosphere.
+      </p>
+      <div class="actions">
+        <a class="button button-primary" href="/links">Open links</a>
+        <a class="button button-secondary" href="/disclosure">Read disclosure</a>
+      </div>
+    </div>
+    <div class="hero-visual" role="img" aria-label="Abstract placeholder for Jane Voss alpine lifestyle imagery">
+      <span>Alpine lifestyle placeholder</span>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="story-title">
+    <p class="eyebrow">Public story world</p>
+    <h2 id="story-title">A SFW creator profile built for lake mornings, hiking notes and resort calm.</h2>
+    <p class="section-intro">
+      This public site keeps the concept transparent, synthetic and safe for general audiences while the visual system is prepared for future reviewed image sets.
+    </p>
+    <div class="card-grid">
+      {cards.map(([title, text]) => (
+        <article class="image-card">
+          <div class="placeholder" role="img" aria-label={`${title} image placeholder`}>
+            <span>{title}</span>
+          </div>
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split" aria-labelledby="launch-title">
+    <div>
+      <p class="eyebrow">Launch ready basics</p>
+      <h2 id="launch-title">Clear links, clear disclosure, simple public pages.</h2>
+      <p>
+        The homepage, link hub, disclosure, imprint and privacy placeholders are structured for a clean public launch and can be completed as legal details and final accounts are confirmed.
+      </p>
+    </div>
+    <div class="note-panel">
+      <strong>SFW public version</strong>
+      <span>No logos, public-safe content only, no real-person likeness claims and no hidden identity framing.</span>
+    </div>
+  </section>
+</BaseLayout>

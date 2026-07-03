@@ -1,2 +1,8 @@
 .netlify/
 qa_*.png
+.astro/
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store

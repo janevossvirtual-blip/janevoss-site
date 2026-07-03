@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const INSTAGRAM_URL = "https://www.instagram.com/REPLACE_ME";
+const FACEBOOK_URL = "https://www.facebook.com/REPLACE_ME";
+const disclosure = "Jane Voss is a fully AI-generated virtual model. She is not a real person and is not based on any real individual. All images are synthetic.";
+---
+
+<BaseLayout
+  title="Jane Voss Links | AI-Generated Alpine Lifestyle Creator"
+  description="Social bio link hub for Jane Voss, a fully AI-generated virtual model focused on alpine lifestyle stories."
+  path="/links"
+>
+  <section class="link-hero">
+    <p class="disclosure-note">{disclosure}</p>
+    <p class="eyebrow">Jane Voss</p>
+    <h1>Links</h1>
+    <p class="lede">Social bio traffic hub for public SFW channels and upcoming destinations.</p>
+    <nav class="link-list" aria-label="Jane Voss links">
+      <a class="link-card" href={INSTAGRAM_URL}>
+        <span>Instagram</span>
+        <small>Replace before launch</small>
+      </a>
+      <a class="link-card" href={FACEBOOK_URL}>
+        <span>Facebook</span>
+        <small>Replace before launch</small>
+      </a>
+      <button class="link-card link-card-disabled" type="button" disabled>
+        <span>X / Twitter</span>
+        <small>Coming soon</small>
+      </button>
+      <button class="link-card link-card-disabled" type="button" disabled>
+        <span>Fanvue</span>
+        <small>Coming soon</small>
+      </button>
+      <button class="link-card link-card-disabled" type="button" disabled>
+        <span>MYM</span>
+        <small>Coming soon</small>
+      </button>
+      <a class="link-card" href="/disclosure">
+        <span>AI Disclosure</span>
+        <small>Read creator policy</small>
+      </a>
+    </nav>
+  </section>
+</BaseLayout>

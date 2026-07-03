@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+}
+
+const {
+  title = "Jane Voss | AI-Generated Alpine Lifestyle Creator",
+  description = "Jane Voss is a fully AI-generated virtual model focused on Austrian alpine lakes, hiking stories and resort mood.",
+  path = Astro.url.pathname
+} = Astro.props;
+
+const site = Astro.site ?? new URL("https://janevoss-hiking.netlify.app");
+const canonical = new URL(path, site).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jane Voss" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="/" aria-label="Jane Voss home">
+        <span class="brand-mark" aria-hidden="true">JV</span>
+        <span>Jane Voss</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/links">Links</a>
+        <a href="/disclosure">Disclosure</a>
+        <a href="/imprint">Imprint</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>Jane Voss is a fully AI-generated virtual model. All images are synthetic.</p>
+      <nav aria-label="Footer navigation">
+        <a href="/disclosure">Disclosure</a>
+        <a href="/imprint">Imprint</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+    </footer>
+  </body>
+</html>
