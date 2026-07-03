@@ -2,4 +2,4 @@
 
 Static homepage and link tree for Jane Voss.
 
-Current public concept: hiking-only.
+Current public concept: hiking-only scroll experience.
